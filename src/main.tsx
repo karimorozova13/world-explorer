@@ -1,21 +1,16 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import Root from "./components/Root";
 
-import "./index.css";
-import { BrowserRouter } from "react-router-dom";
-import App from "./components/App";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+// createRoot(document.getElementById("root")!).render(
+//     const [isDarkMode, setIsDarkMode] = useState(false);
 
-const client = new ApolloClient({
-  uri: "https://countries.trevorblades.com/",
-  cache: new InMemoryCache(),
-});
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <ApolloProvider client={client}>
-        <App />
-      </ApolloProvider>
-    </BrowserRouter>
-  </StrictMode>
-);
+//   const currentTheme: ThemeType = isDarkMode ? darkTheme : lightTheme;
+//   <StrictMode>
+//     <ThemeProvider theme={lightTheme}>
+//       <Header toggleTheme={() => setIsDarkMode(!isDarkMode)}/>
+//       <App />
+//     </ThemeProvider>
+//   </StrictMode>
+// );
+
+createRoot(document.getElementById("root")!).render(<Root />);
