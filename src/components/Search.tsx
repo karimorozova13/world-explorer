@@ -1,4 +1,5 @@
-import React from "react";
+import * as React from "react";
+import TextField from "@mui/material/TextField";
 
 interface SearchProps {
   searchTerm: string;
@@ -7,12 +8,15 @@ interface SearchProps {
 
 const Search = ({ searchTerm, handleSearch }: SearchProps) => {
   return (
-    <input
-      type="text"
-      placeholder="Search for a country..."
-      value={searchTerm}
-      onChange={handleSearch}
-    />
+    <>
+      <TextField
+        onChange={handleSearch}
+        value={searchTerm}
+        id="standard-basic"
+        label="Search for a country..."
+        variant="standard"
+      />
+    </>
   );
 };
 

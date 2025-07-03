@@ -1,7 +1,8 @@
 import type React from "react";
 import styled from "styled-components";
+
 const Wrap = styled.div`
-  padding: 60px 0;
+  padding: 120px 0;
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
   border: 1px solid ${({ theme }) => theme.colors.border};

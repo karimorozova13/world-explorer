@@ -6,6 +6,7 @@ import Title from "./components/Title";
 import Search from "./components/Search";
 import Alphabet from "./components/Alphabet";
 import CountriesList from "./components/CountriesList";
+import Section from "./components/Section";
 
 function App() {
   const [countries, setCountries] = useState<
@@ -56,7 +57,7 @@ function App() {
   };
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <Section>
       <Title title={"World Explorer (graphql-request version)"} />
       <Search searchTerm={searchTerm} handleSearch={handleSearch} />
       <Alphabet
@@ -65,7 +66,7 @@ function App() {
         handleClear={handleClear}
       />
       <CountriesList data={countries} />
-    </div>
+    </Section>
   );
 }
 

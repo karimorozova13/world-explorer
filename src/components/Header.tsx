@@ -1,12 +1,16 @@
 import styled from "styled-components";
+
+import ToggleBtn from "./ToggleBtn";
+
 const Wrap = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
   background-color: ${({ theme }) => theme.colors.background};
-  padding: %{({theme})=> theme.spacing;.small};
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;
 
 interface HeaderProps {
@@ -15,7 +19,7 @@ interface HeaderProps {
 const Header = ({ toggleTheme }: HeaderProps) => {
   return (
     <Wrap>
-      <button onClick={toggleTheme}>Toggle Theme</button>
+      <ToggleBtn toggleTheme={toggleTheme} />
     </Wrap>
   );
 };
